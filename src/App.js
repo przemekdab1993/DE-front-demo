@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState,} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import style from './App.module.css';
+
+import Character from "./components/Character/Character";
+
+
+const CHARACTER_STATS = [
+    {name: 'strength', value: 3,},              //siła
+    {name: 'perception', value: 3,},            //percepcja
+    {name: 'endurance', value: 3,},             //wytrzymałość
+    {name: 'harisma', value: 3,},             //charyzma
+    {name: 'intelligence', value: 3,},          //inteligencja
+    {name: 'agility', value: 3,},              //zręczność
+    {name: 'luck', value: 3 }               //szczęście
+];
+
+const App = () =>  {
+
+    const [characterStats, setCharacterStats] = useState(CHARACTER_STATS);
+
+    return (
+        <div className={style.App}>
+            <div>
+                <Character characterStats={characterStats} ></Character>
+            </div>
+        </div>
+    );
 }
 
 export default App;
