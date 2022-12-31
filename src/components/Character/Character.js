@@ -11,7 +11,6 @@ const Character = (props) => {
             <ul className={style.character_stats_list}>
                 { props.characterStats.map( (characterStat) => {
                     return (
-
                         <CharacterStat
                             name={characterStat.name}
                             value={characterStat.value}

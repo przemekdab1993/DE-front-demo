@@ -21,7 +21,7 @@ const App = () =>  {
 
     return (
         <div className={style.App}>
-            <div>
+            <div className={style.cart}>
                 <Character characterStats={characterStats} ></Character>
             </div>
         </div>
