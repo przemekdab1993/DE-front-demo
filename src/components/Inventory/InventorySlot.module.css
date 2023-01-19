@@ -1,0 +1,7 @@
+.inventory_slot {
+    width: 192px;
+    height: 192px;
+    border: 4px solid #fff;
+    border-radius: 16px;
+    margin: 15px;
+}
