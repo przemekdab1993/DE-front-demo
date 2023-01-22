@@ -5,6 +5,7 @@ import style from "./App.module.css";
 import Character from "./components/Character/Character";
 import Inventory from "./components/Inventory/Inventory";
 import Card from "./components/DefaultInterface/Card";
+import Menu from "./components/DefaultInterface/Menu/Menu";
 
 const CHARACTER_STATS = [
     {id: 'cs0001', name: 'strength', value: 3,},              //siła
@@ -77,13 +78,56 @@ const EQUIPMENT_ITEMS = [
         },
         used: false
     }
-]
+];
+
+const MENU_ITEMS = [
+  {
+    id: 'menu1',
+    name: 'Home',
+    className: null,
+    active: false
+  },
+  {
+    id: 'menu2',
+    name: 'Inventory',
+    className: null,
+    active: false
+  },
+  {
+    id: 'menu3',
+    name: 'Adventure',
+    className: null,
+    active: false
+  },
+  {
+    id: 'menu4',
+    name: 'Stats',
+    className: null,
+    active: false
+  },
+];
 
 const App = () =>  {
 
     const [characterStats, setCharacterStats] = useState(CHARACTER_STATS);
-
     const [equipmentItems, setEquipmentItems] = useState(EQUIPMENT_ITEMS);
+    const [menuItems, setMenuItems] = useState(MENU_ITEMS);
+
+
+    const toggleMenuChandler = (itemId) => {
+        setMenuItems((prevMenuItems) => {
+            const newStateMenu = prevMenuItems.map((item) => {
+                if (item.id === itemId) {
+                    item.active = true;
+                } else {
+                    item.active = false;
+                }
+                return item;
+            });
+
+            return newStateMenu;
+        });
+    }
 
     const updatedCharacterStats = (stats , add = true) => {
 
@@ -129,6 +173,11 @@ const App = () =>  {
 
     return (
         <div className={style.App}>
+            <Menu
+                menuItems={menuItems}
+                onToggleMenuItem={toggleMenuChandler}
+            />
+
             <Card className={style.cart1}>
                 <Character characterStats={characterStats} ></Character>
             </Card>

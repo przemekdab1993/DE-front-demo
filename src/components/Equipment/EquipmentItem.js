@@ -5,7 +5,6 @@ import style from "./EquipmentItem.module.css";
 const EquipmentItem = (props) => {
 
     const toggleEquipment = () => {
-
         return props.onToggleEquipmentSlot(props.item.id);
     }
 
