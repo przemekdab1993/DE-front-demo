@@ -10,7 +10,7 @@ const EquipmentItem = (props) => {
     }
 
     return (
-        <div className={`${style.equipmant_Item} ${props.item.used ? 'active': 'd'}`} onClick={toggleEquipment}>
+        <div className={style.equipment_Item} onClick={toggleEquipment}>
             <span>{props.item.name}</span><br />
             <span>{props.item.type}</span><br />
             <span>{props.item.used ? 1 : 0}</span><br />

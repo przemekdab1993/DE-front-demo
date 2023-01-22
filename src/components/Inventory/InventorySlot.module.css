@@ -5,3 +5,7 @@
     border-radius: 16px;
     margin: 15px;
 }
+
+.inventory_slot.active {
+    border-color: red;
+}

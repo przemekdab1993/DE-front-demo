@@ -11,7 +11,7 @@ const InventorySlot = (props) => {
     }
 
     return (
-        <div className={style.inventory_slot}>
+        <div className={`${style.inventory_slot} ${props.slotItem.used ? style.active : ''}`}>
             <EquipmentItem
                 item={props.slotItem}
                 onToggleEquipmentSlot = {toggleEquipmentSlot}

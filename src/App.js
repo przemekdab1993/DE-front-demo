@@ -1,9 +1,10 @@
 import React,{useState,} from "react";
 
-import style from './App.module.css';
+import style from "./App.module.css";
 
 import Character from "./components/Character/Character";
 import Inventory from "./components/Inventory/Inventory";
+import Card from "./components/DefaultInterface/Card";
 
 const CHARACTER_STATS = [
     {id: 'cs0001', name: 'strength', value: 3,},              //siła
@@ -128,16 +129,16 @@ const App = () =>  {
 
     return (
         <div className={style.App}>
-            <div className={style.cart}>
+            <Card className={style.cart1}>
                 <Character characterStats={characterStats} ></Character>
-            </div>
-            <div className={style.cart}>
+            </Card>
+            <Card className={style.cart2}>
                 <Inventory
                     equipmentItems = {equipmentItems}
                     onToggleEquipmented = {toggleUsedEquipment}
                 >
                 </Inventory>
-            </div>
+            </Card>
         </div>
     );
 }
