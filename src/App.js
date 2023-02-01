@@ -136,7 +136,7 @@ const App = () =>  {
         for (const statKey in stats) {
             newCharacterStats = characterStats.map((stat) => {
                 console.log(stat.name);
-                if (stat.name == statKey) {
+                if (stat.name === statKey) {
                     if (add) {
                         stat.value = stat.value + stats[statKey];
                     } else {
