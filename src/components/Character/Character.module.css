@@ -1,6 +1,13 @@
 .character {
 
 }
+.character h2 {
+    margin: 10px 0 10px 0;
+}
 .character_stats_list {
-
+    list-style-type: none;
+    text-transform: uppercase;
+    line-height: 28px;
+    margin: 5px 0px;
+    padding: 0px;
 }

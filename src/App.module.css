@@ -3,4 +3,18 @@
 }
 body {
     background: darkblue;
+    padding: 0px;
+    margin: 0px;
+    color: #fff;
+}
+
+.cart1 {
+    margin: 20px 20px;
+    border: 1px solid #fff;
+    border-radius: 24px;
+}
+.cart2 {
+    margin: 20px 20px;
+    border: 8px solid #fff;
+    border-radius: 24px;
 }

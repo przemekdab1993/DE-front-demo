@@ -1,0 +1,17 @@
+.nav_item {
+    border-right: 2px solid #fff;
+}
+.nav_item:last-of-type {
+    border: none;
+}
+.nav_link {
+    padding: 12px 32px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+}
+.nav_link.active {
+    background: #4d4dff;
+}
